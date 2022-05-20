@@ -1,8 +1,6 @@
 import { Paper} from "@mui/material";
 import { ContextValue } from "../context/Context";
 import Appeal from "./Appeal";
-import { createAppeal } from "../actions/appeals";
-import types from "../actions/types";
 
 
 const AppealsPage = () => {
@@ -16,7 +14,6 @@ const AppealsPage = () => {
                 state.allAppeals.filter(appeal=>appeal.projectName.toLowerCase().includes(state.searchInput.toLowerCase()) || 
                 appeal.applicantName.toLowerCase().includes(state.searchInput.toLowerCase()))
                 .sort((a,b)=>{
-                    console.log("objectIS: ", a);
                     if(a.projectName.toLowerCase() > b.projectName.toLowerCase()){
                         return 1;
                     }

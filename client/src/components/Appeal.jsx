@@ -21,7 +21,7 @@ const Appeal = ({appealItem}) => {
     }
     const handleDeleteClick = () => {
         deleteBlocked = true;
-        deleteAppeal(appealItem._id,appealItem).then(res=>{
+        deleteAppeal(appealItem._id).then(res=>{
             if(res.status >= 200 & res.status <= 299){
                 alert("success");
                 dispatch({
@@ -70,7 +70,7 @@ const Appeal = ({appealItem}) => {
             </Container>
             {
                 JSON.parse(localStorage.getItem("userSession")).userId === appealItem.userId ? 
-                <Box style={{display:"flex", flexDirection:"row", position:"fixed", right:5}} >
+                <Box style={{display:"flex", flexDirection:"row", position:"absolute", right:5}} >
                     <IconButton style={{marginRight:5}} onClick={handleEditClick}>
                         <EditIcon style={{fontSize:"20px", color:"white"}} />
                     </IconButton>
