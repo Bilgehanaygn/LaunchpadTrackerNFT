@@ -10,7 +10,6 @@ import EditModal from './EditModal';
 
 const MyAppBar = () => {
     const [state, dispatch] = ContextValue();
-    const [modalOpen, setModalOpen] = useState(false);
 
     const style = {
         position:"sticky",
@@ -74,7 +73,7 @@ const MyAppBar = () => {
                 <Typography variant="h5" style={{fontWeight:"bold", color:"white"}}>Applicant Name</Typography>
             </Container>
             <Container style={{textAlign:"center"}}>
-                <Typography variant="h5" style={{fontWeight:"bold", color:"white"}}>Status</Typography>
+                <Typography variant="h5" style={{fontWeight:"bold", color:"white"}}>Appeal Status</Typography>
             </Container>
             <Container style={{textAlign:"center"}}>
                 <Typography variant="h5" style={{fontWeight:"bold", color:"white"}}>Result</Typography>

@@ -120,7 +120,7 @@ const EditModal = () => {
                     Applicant Name
                 <TextField variant="standard" defaultValue={state.openModal.modalAppeal.applicantName} id="applicantNameInputId"></TextField>
                 </Box>
-                Status
+                    Appeal Status
                 <Box>
                     <CircleIcon style={statusSelection===-1 ? {border: "2px solid black", borderRadius: 25, color:"red", margin:8} : {color:"red", margin:8}} onClick={()=>{handleStatusClick(-1)}} />
                     <CircleIcon style={statusSelection===0 ? {border: "2px solid black", borderRadius: 25, color:"yellow", margin:8} : {color:"yellow", margin:8}} onClick={()=>{handleStatusClick(0)}} />

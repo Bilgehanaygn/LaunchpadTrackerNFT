@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const homeUrl = "http://localhost:5000/appeals";
+const homeUrl = "https://sleepy-ravine-45247.herokuapp.com/appeals";
 
 
 export const fetchAppeals = () => {
@@ -19,6 +19,6 @@ export const updateAppeal = (id, appealItem) => {
     return axios.put(homeUrl + `/${id}`, appealItem, {headers: { Authorization: 'Bearer ' + localStorage.getItem("jwt")}});
 }
 
-export const deleteAppeal = (id, appealItem) => {
-    return axios.delete(homeUrl + `/${id}`, appealItem, {headers: { Authorization: 'Bearer ' + localStorage.getItem("jwt")}});
+export const deleteAppeal = (id) => {
+    return axios.delete(homeUrl + `/${id}`, {headers: { Authorization: 'Bearer ' + localStorage.getItem("jwt")}});
 }
